@@ -1,0 +1,88 @@
+.uploadContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 280px;
+}
+
+.uploadCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    border: 2px solid #2A6BAD;
+    border-radius: 12px;
+    background-color: white;
+    text-align: center;
+    height: 260px;
+    transition: all 0.2s ease;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.uploadCard:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.uploadIcon {
+    width: 42px;
+    height: 42px;
+    border: 2px solid #2A6BAD;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.plusIcon {
+    color: #2A6BAD;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.uploadTitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2A6BAD;
+    margin-bottom: 12px;
+    white-space: nowrap;
+}
+
+.uploadDescription {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.4;
+    max-width: 240px;
+    margin-bottom: 20px;
+}
+
+.uploadAction {
+    margin-top: auto;
+}
+
+.manageLink {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: left;
+    align-self: flex-start;
+}
+
+.manageLink:hover {
+    text-decoration: underline;
+    color: #1e4d73;
+}
+
+.manageLink:focus {
+    outline: 2px solid #2A6BAD;
+    outline-offset: 2px;
+}

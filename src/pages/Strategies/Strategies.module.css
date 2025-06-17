@@ -1,0 +1,483 @@
+.strategiesContainer {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.breadcrumbLink {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumbLink:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.breadcrumbLink:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+.separator {
+    margin: 0 8px;
+    color: #999;
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.headerContent {
+    flex: 1;
+}
+
+.headerContent h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #333;
+}
+
+.description {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.strategyTypeCards {
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+    max-width: 75%;
+}
+
+.strategyTypeCard {
+    flex: 1;
+    padding: 20px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.strategyTypeCard:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20px;
+    bottom: 20px;
+    width: 1px;
+    background-color: #ddd;
+}
+
+.typeCardsIndicator {
+    position: relative;
+    text-align: right;
+    margin-top: -20px;
+    margin-right: 20px;
+}
+
+.typeCardsCount {
+    background: #0073e6;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px 12px 0 0;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.strategyTypeCard:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.strategyTypeCard:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+.strategyTypeCard h3 {
+    margin-bottom: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 0;
+    min-width: 80px;
+    max-width: 25%;
+    width: fit-content;
+    align-self: flex-start;
+}
+
+/* Strategy type specific colors */
+.model h3 {
+    background-color: #f4c150;
+    color: black;
+}
+
+.taxsmartsma h3 {
+    background-color: #d9fde5;
+    color: black;
+}
+
+.traditionalsma h3 {
+    background-color: #d5e2fc;
+    color: black;
+}
+
+.features {
+    font-size: 13px;
+    color: #333;
+}
+
+.features strong {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.features ul {
+    margin: 0;
+    padding-left: 16px;
+}
+
+.features li {
+    margin-bottom: 4px;
+    line-height: 1.4;
+}
+
+.tabNavigation {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+    gap: 30px;
+}
+
+.tab {
+    background: none;
+    border: none;
+    padding: 12px 0;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.tab:hover {
+    color: #333;
+}
+
+.tab:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+.activeTab {
+    color: #007bff !important;
+    border-bottom-color: #007bff !important;
+    font-weight: 600;
+}
+
+.resultCount {
+    margin-left: auto;
+    background: #007bff;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.strategyGrid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 4fr 1px 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.strategiesColumn {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.verticalSeparator {
+    width: 1px;
+    background-color: #e0e0e0;
+    height: 100%;
+    min-height: 320px;
+    justify-self: center;
+}
+
+.uploadColumn {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.strategyCard {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    transition: box-shadow 0.2s;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+}
+
+.strategyCard:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.providerLogo {
+    display: flex;
+    flex-direction: column;
+}
+
+.providerLogo span:first-child {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+.assetManagement {
+    font-size: 10px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.bookmarkBtn {
+    background: none;
+    border: 1px solid #ddd;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.bookmarkBtn:hover {
+    border-color: #007bff;
+    color: #007bff;
+    background-color: #f8f9ff;
+}
+
+.bookmarkBtn:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+.bookmarkBtn:active {
+    transform: scale(0.95);
+}
+
+.strategyTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.strategyDescription {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 14px;
+}
+
+.strategyType {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+}
+
+.typeLabel {
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.typeLabel.model {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.typeLabel.taxsmartsma {
+    background-color: #28a745;
+    color: white;
+}
+
+.typeLabel.traditionalsma {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .strategiesContainer {
+        padding: 20px;
+    }
+    
+    .strategyTypeCards {
+        flex-direction: column;
+    }
+    
+    .strategyGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .strategiesContainer {
+        padding: 15px;
+    }
+    
+    .strategyTypeCards {
+        gap: 16px;
+    }
+    
+    .tabNavigation {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    
+    .resultCount {
+        margin-left: 0;
+        margin-top: 8px;
+        width: 100%;
+    }
+    
+    .strategyGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    
+    .header h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 24px;
+    }
+    
+    .strategyTypeCard {
+        padding: 16px;
+    }
+    
+    .strategyCard {
+        padding: 16px;
+    }
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.skeletonCard {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skeletonHeader {
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    width: 60%;
+}
+
+.skeletonTitle {
+    height: 24px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    width: 90%;
+}
+
+.skeletonDescription {
+    height: 16px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.skeletonDescription:last-of-type {
+    width: 70%;
+    margin-bottom: 16px;
+}
+
+.skeletonType {
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    width: 30%;
+    margin-left: auto;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Tab disabled state */
+.tab:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

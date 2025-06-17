@@ -1,0 +1,225 @@
+.modelDetailContainer {
+    flex: 1;
+    max-width: 1442px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #ffffff;
+    min-height: calc(100vh - 60px);
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.breadcrumbLink {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumbLink:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.breadcrumbLink:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+.separator {
+    margin: 0 8px;
+    color: #999;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.titleSection {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.backBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: 1px solid #ddd;
+    color: #666;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.backBtn:hover {
+    background-color: #f8f9fa;
+    border-color: #bbb;
+    color: #333;
+}
+
+.backBtn:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+.header h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+}
+
+.headerActions {
+    display: flex;
+    gap: 12px;
+}
+
+.editBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.editBtn:hover {
+    background-color: #0056b3;
+}
+
+.deleteBtn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.deleteBtn:hover {
+    background-color: #c82333;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.modelInfo {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.modelInfo h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.infoGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.infoItem {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.infoItem label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.infoItem span {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+.modelDescription,
+.modelPerformance {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.modelDescription h2,
+.modelPerformance h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.modelDescription p,
+.modelPerformance p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .modelDetailContainer {
+        padding: 20px;
+    }
+    
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .titleSection {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    .headerActions {
+        width: 100%;
+    }
+    
+    .editBtn,
+    .deleteBtn {
+        flex: 1;
+    }
+    
+    .infoGrid {
+        grid-template-columns: 1fr;
+    }
+}

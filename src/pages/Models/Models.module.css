@@ -1,0 +1,377 @@
+.modelsContainer {
+    display: flex;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #e0e0e0;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.sidebarHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.sidebarHeader h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.collapseBtn {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.collapseBtn:hover {
+    background-color: #e9ecef;
+}
+
+.filterSection {
+    margin-bottom: 24px;
+}
+
+.filterLabel {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.filterSelect {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: white;
+    color: #333;
+}
+
+.filterSelect:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+.checkboxGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.checkboxLabel input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.count {
+    margin-left: auto;
+    color: #666;
+    font-size: 13px;
+}
+
+.mainContent {
+    flex: 1;
+    padding: 20px;
+    max-width: calc(100% - 280px);
+    background-color: #f8f9fa;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.breadcrumbLink {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumbLink:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.breadcrumbLink:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+.separator {
+    margin: 0 8px;
+    color: #999;
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.headerContent {
+    flex: 1;
+}
+
+.header h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #333;
+}
+
+.description {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+.addModelBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.addModelBtn:hover {
+    background-color: #0056b3;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.leftControls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.resultsCount {
+    font-size: 14px;
+    color: #666;
+    white-space: nowrap;
+}
+
+.searchContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 12px;
+    color: #666;
+    pointer-events: none;
+}
+
+.searchInput {
+    padding: 8px 12px 8px 36px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 250px;
+    background-color: white;
+}
+
+.searchInput:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+.groupByToggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.toggleLabel {
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.rightControls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.exportBtn,
+.customizeBtn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.exportBtn:hover,
+.customizeBtn:hover {
+    background-color: #f0f8ff;
+}
+
+.tableContainer {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.table thead {
+    background-color: #f8f9fa;
+}
+
+.table th {
+    padding: 16px;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 13px;
+}
+
+.table td {
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.modelLink {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    text-align: left;
+}
+
+.modelLink:hover {
+    text-decoration: underline;
+}
+
+.taxHeader {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.taxIcon {
+    color: #ffc107;
+    font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 240px;
+    }
+    
+    .mainContent {
+        padding: 20px;
+    }
+    
+    .searchInput {
+        width: 200px;
+    }
+    
+    .header h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .modelsContainer {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .mainContent {
+        max-width: 100%;
+    }
+    
+    .controls {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    
+    .leftControls {
+        flex-wrap: wrap;
+    }
+    
+    .tableContainer {
+        overflow-x: auto;
+    }
+}
