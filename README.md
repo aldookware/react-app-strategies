@@ -56,10 +56,30 @@ npm start
 
 This will start the development server and open the application in your default web browser.
 
-## Contributing
+## Testing
 
-Contributions are welcome! Please feel free to submit a pull request or open an issue for any suggestions or improvements.
+This project includes a comprehensive testing setup using Jest and React Testing Library.
 
-## License
+### Running Tests
 
-This project is licensed under the MIT License.
+```bash
+# Run tests in watch mode
+npm test
+
+# Run tests once (CI mode)
+npm run test:ci
+
+# Run tests with coverage
+npm run test:coverage
+```
+
+### Testing Structure
+
+- **Unit Tests**: Component-level testing for individual React components
+- **Integration Tests**: Testing component interactions and context providers
+- **Setup**: Custom test utilities with provider wrappers for realistic testing
+- **Mocking**: Proper mocking of external dependencies and browser APIs
+
+See [TESTING.md](./TESTING.md) for detailed testing documentation and best practices.
+
+## Available Scripts

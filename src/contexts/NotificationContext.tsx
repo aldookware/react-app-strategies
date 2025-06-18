@@ -3,6 +3,8 @@ import React, { createContext, useContext, useState, ReactNode } from 'react';
 interface NotificationContextType {
     pendingApprovalsCount: number;
     setPendingApprovalsCount: (count: number) => void;
+    incrementPendingApprovals: () => void;
+    decrementPendingApprovals: () => void;
 }
 
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
@@ -22,10 +24,20 @@ interface NotificationProviderProps {
 export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
     const [pendingApprovalsCount, setPendingApprovalsCount] = useState(0);
 
+    const incrementPendingApprovals = () => {
+        setPendingApprovalsCount(count => count + 1);
+    };
+
+    const decrementPendingApprovals = () => {
+        setPendingApprovalsCount(count => Math.max(0, count - 1));
+    };
+
     return (
         <NotificationContext.Provider value={{
             pendingApprovalsCount,
-            setPendingApprovalsCount
+            setPendingApprovalsCount,
+            incrementPendingApprovals,
+            decrementPendingApprovals
         }}>
             {children}
         </NotificationContext.Provider>
