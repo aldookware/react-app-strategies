@@ -8,6 +8,7 @@ import Strategies from './pages/Strategies/Strategies';
 import Models from './pages/Models/Models';
 import ModelDetail from './pages/Models/ModelDetail';
 import AddModels from './pages/Models/AddModels';
+import ReviewNewModel from './pages/Models/ReviewNewModel';
 import AdminDashboard from './pages/Admin/AdminDashboard';
 import AdminOverview from './pages/Admin/AdminOverview';
 import ModelFamilies from './pages/Admin/ModelFamilies';
@@ -22,6 +23,11 @@ const getBreadcrumbs = (pathname: string) => {
     } else if (pathname === '/models/add') {
       breadcrumbs.push({ label: 'Models', href: '/models' });
       breadcrumbs.push({ label: 'Add Models' });
+    } else if (pathname.match(/^\/models\/review\/[^/]+$/)) {
+      breadcrumbs.push({ label: 'Models', href: '/models' });
+      breadcrumbs.push({ label: 'Manage Strategies' });
+      breadcrumbs.push({ label: 'Review Models' });
+      breadcrumbs.push({ label: 'BlackRock Core Equity' });
     } else if (pathname.match(/^\/models\/[^/]+$/)) {
       breadcrumbs.push({ label: 'Models', href: '/models' });
       breadcrumbs.push({ label: 'Model Details' });
@@ -60,6 +66,7 @@ const AppContent: React.FC = () => {
           <Route path="/admin/overview" component={AdminOverview} />
           <Route path="/approvals" component={AdminDashboard} />
           <Route path="/admin" component={AdminDashboard} />
+          <Route path="/models/review/:modelId" component={ReviewNewModel} />
           <Route path="/models/add" component={AddModels} />
           <Route path="/models/:modelId" component={ModelDetail} />
           <Route path="/models" component={Models} />

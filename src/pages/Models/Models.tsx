@@ -260,6 +260,13 @@ const Models: React.FC = () => {
                         </svg>
                         ADD MODEL(S)
                     </button>
+                    <button 
+                        type="button"
+                        className={styles.reviewModelBtn}
+                        onClick={() => history.push('/models/review/blackrock-core-equity')}
+                    >
+                        📋 REVIEW MODEL (DEMO)
+                    </button>
                 </div>
 
                 {/* Controls */}

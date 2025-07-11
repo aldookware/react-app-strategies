@@ -1,0 +1,543 @@
+/* Container and layout */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 0;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.breadcrumbLink {
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.breadcrumbLink:hover {
+    text-decoration: underline;
+}
+
+.separator {
+    color: #6c757d;
+}
+
+.breadcrumbCurrent {
+    color: #343a40;
+    font-weight: 500;
+}
+
+/* Header */
+.header {
+    margin-bottom: 24px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #343a40;
+    margin: 0;
+}
+
+/* Status Banner */
+.statusBanner {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.statusIcon {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.statusContent {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.statusTitle {
+    font-weight: 600;
+    color: #856404;
+}
+
+.statusDescription {
+    color: #856404;
+    font-size: 14px;
+}
+
+/* Main Content */
+.content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+/* Left Panel */
+.leftPanel {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.section {
+    background-color: white;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.sectionTitle {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 16px 0;
+}
+
+/* Review Type */
+.reviewType {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.reviewTypeLabel {
+    font-weight: 500;
+    color: #343a40;
+}
+
+.reviewTypeDescription {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+/* Model List */
+.modelList {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.modelItem {
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.modelItem:hover {
+    background-color: #f8f9fa;
+}
+
+.modelItemActive {
+    background-color: #007bff;
+    color: white;
+}
+
+.modelItemActive:hover {
+    background-color: #0056b3;
+}
+
+.modelItemArrow {
+    font-size: 16px;
+}
+
+/* Proxy Info */
+.proxyInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.proxyTitle {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.proxyLink {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.viewLink {
+    color: #007bff;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.viewLink:hover {
+    text-decoration: underline;
+}
+
+/* Clients Info */
+.clientsInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.clientsDescription {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.expandButton {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #6c757d;
+    padding: 4px;
+}
+
+.expandButton:hover {
+    color: #343a40;
+}
+
+/* Date Info */
+.dateInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.dateDescription {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.date {
+    font-weight: 500;
+    color: #343a40;
+}
+
+/* Right Panel */
+.rightPanel {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.tableContainer {
+    background-color: white;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.tableTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #343a40;
+    margin: 0;
+    padding: 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.tableHeader {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 20px;
+    padding: 12px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.holdingsCount {
+    font-weight: 500;
+}
+
+.totalWeight {
+    font-weight: 600;
+    color: #343a40;
+}
+
+.proxiesCount {
+    font-weight: 500;
+}
+
+/* Table */
+.table {
+    overflow-x: auto;
+}
+
+.tableHeaderRow {
+    display: grid;
+    grid-template-columns: 80px 1fr 100px 1fr;
+    gap: 12px;
+    padding: 12px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.tableHeaderCell {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tableRow {
+    display: grid;
+    grid-template-columns: 80px 1fr 100px 1fr;
+    gap: 12px;
+    padding: 12px 20px;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 14px;
+    align-items: center;
+}
+
+.tableRow:last-child {
+    border-bottom: none;
+}
+
+.tableRow:hover {
+    background-color: #f8f9fa;
+}
+
+.tableCell {
+    color: #343a40;
+}
+
+.warningIcon {
+    color: #f39c12;
+    font-size: 16px;
+}
+
+/* Affirm Section */
+.affirmSection {
+    background-color: white;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.affirmTitle {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 16px 0;
+}
+
+.checkboxGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    accent-color: #007bff;
+    cursor: pointer;
+}
+
+.checkboxLabel {
+    font-size: 14px;
+    color: #343a40;
+    line-height: 1.5;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+}
+
+.cancelButton {
+    background: none;
+    border: 1px solid #6c757d;
+    color: #6c757d;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cancelButton:hover {
+    background-color: #6c757d;
+    color: white;
+}
+
+.rejectButton {
+    background: none;
+    border: 1px solid #dc3545;
+    color: #dc3545;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.rejectButton:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.approveButton {
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.approveButton:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.approveButton.disabled {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.approveButton.disabled:hover {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .content {
+        grid-template-columns: 280px 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+    
+    .leftPanel {
+        order: 2;
+    }
+    
+    .rightPanel {
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+    
+    .tableHeaderRow,
+    .tableRow {
+        grid-template-columns: 60px 1fr 80px 1fr;
+        gap: 8px;
+        padding: 8px 16px;
+    }
+    
+    .tableTitle {
+        padding: 16px;
+    }
+    
+    .tableHeader {
+        padding: 8px 16px;
+    }
+    
+    .actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .actions button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .breadcrumb {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+    
+    .title {
+        font-size: 24px;
+    }
+    
+    .tableHeaderRow,
+    .tableRow {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+    
+    .tableHeaderCell,
+    .tableCell {
+        padding: 4px 0;
+    }
+    
+    .tableHeaderCell:not(:first-child),
+    .tableCell:not(:first-child) {
+        border-top: 1px solid #e9ecef;
+        padding-top: 8px;
+    }
+}
