@@ -84,8 +84,8 @@
 /* Main Content */
 .content {
     display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 24px;
+    grid-template-columns: 379px 1fr;
+    gap: 32px;
     margin-bottom: 24px;
 }
 
@@ -93,14 +93,26 @@
 .leftPanel {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 32px;
 }
 
 .section {
     background-color: white;
     border: 1px solid #e9ecef;
     border-radius: 4px;
-    padding: 20px;
+    padding: 24px 32px;
+}
+
+.modelSection {
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 24px 0px;
+}
+
+.modelSection .sectionTitle {
+    padding: 0px 32px 16px 32px;
+    margin: 0;
 }
 
 .sectionTitle {
@@ -133,35 +145,95 @@
 .modelList {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 0px;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
 .modelItem {
-    padding: 8px 12px;
-    border-radius: 4px;
+    padding: 16px 20px;
+    border-radius: 0px;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: all 0.2s ease;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 14px;
+    user-select: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #e9ecef;
+    background-color: white;
 }
 
 .modelItem:hover {
     background-color: #f8f9fa;
 }
 
+.modelItem:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
 .modelItemActive {
-    background-color: #007bff;
-    color: white;
+    background-color: white;
+    color: #007bff;
+    border-left: 4px solid #007bff;
+    font-weight: 500;
+    animation: modelSelect 0.2s ease-out;
+}
+
+@keyframes modelSelect {
+    from {
+        background-color: white;
+        color: #343a40;
+        border-left: 4px solid transparent;
+    }
+    to {
+        background-color: white;
+        color: #007bff;
+        border-left: 4px solid #007bff;
+    }
 }
 
 .modelItemActive:hover {
-    background-color: #0056b3;
+    background-color: #f8f9fa;
+    color: #0056b3;
+}
+
+.modelItemActive:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
 }
 
 .modelItemArrow {
-    font-size: 16px;
+    color: #007bff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+.modelItem:last-child {
+    border-bottom: none;
+}
+
+.modelItemHeader {
+    cursor: default;
+    color: #6c757d;
+    font-weight: 500;
+    background-color: #f8f9fa;
+    border: none;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.modelItemHeader:hover {
+    background-color: transparent;
+}
+
+.modelItemHeader:focus {
+    outline: none;
 }
 
 /* Proxy Info */
@@ -264,6 +336,11 @@
     border: 1px solid #e9ecef;
     border-radius: 4px;
     overflow: hidden;
+    transition: opacity 0.2s ease;
+}
+
+.tableContainer.switching {
+    opacity: 0.7;
 }
 
 .tableTitle {
@@ -512,6 +589,24 @@
     .actions button {
         width: 100%;
     }
+    
+    /* Sidebar responsive adjustments */
+    .content {
+        grid-template-columns: 320px 1fr;
+        gap: 24px;
+    }
+    
+    .section {
+        padding: 20px 24px;
+    }
+    
+    .modelSection {
+        padding: 20px 0px;
+    }
+    
+    .modelSection .sectionTitle {
+        padding: 0px 24px 16px 24px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -539,5 +634,21 @@
     .tableCell:not(:first-child) {
         border-top: 1px solid #e9ecef;
         padding-top: 8px;
+    }
+}
+
+/* Additional mobile-first breakpoint */
+@media (max-width: 1024px) {
+    .content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .leftPanel {
+        order: 2;
+    }
+    
+    .rightPanel {
+        order: 1;
     }
 }
